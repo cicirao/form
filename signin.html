@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Goodreads member sign in</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header id="goodreads"><h1>good<strong>reads</strong></h1></header>
+  <div id="wrap">
+    <div id="fbsignin">
+      <input type="submit" id="fbSignin" class="fb" value="Sign in with Facebook" >
+    </div>
+    <h3>Or</h3>
+    <form accept-charset="utf-8" action="#null" autocomplete="on" method="post" name="signin">
+    <ol>
+      <li>
+        <input type="email" name="email" id="email" autocomplete="on" placeholder="Email" />
+      </li>
+      <li>
+        <input type="password" name="password" id="password" autocomplete="off" maxlength="30" placeholder="Password" />
+      </li>
+      <li><a href="#">Forgot password?</a></li>
+      <li>
+        <input type="submit" id="emailSignin" value="Sign in" />
+      </li>
+    </ol>
+    </form>
+    <input type="checkbox" id="keepSignedin" name="keepSignedin" checked="">
+    <label for="keepSignedin">Keep me signed in</label>
+    <div id="signup">
+      <h2>Not a member?</h2>
+      <div><a href="../signup">Sign up</a></div>
+    </div>
+  </div>
+</body>
+</html>
