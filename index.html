@@ -6,34 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" href="css/screen.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $('document').ready(function() {
+    var email = $("input[name='email']");
+    var password = $("input[name='password']");
+
+    email.focus(function() {
+      $("label[for='email']").css("display", "none");
+    });
+    email.blur(function() {
+      $("label[for='email']").css("display", "inline");
+    });
+    password.focus(function() {
+      $("label[for='password']").css("display", "none");
+    });
+    password.blur(function() {
+      $("label[for='password']").css("display", "inline");
+    });
+  });
+  </script>
 </head>
 <body>
   <header id="goodreads"><h1>good<strong>reads</strong></h1></header>
   <div id="wrap">
-    <h2>New member sign up</h2>
     <form accept-charset="utf-8" action="#null" autocomplete="on" method="post" name="newMemberSignup">
     <ol>
       <li>
-        <input type="text" name="name" id="name" autocomplete="on" maxlength="30" placeholder="Name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" autocomplete="on" />
       </li>
       <li>
-        <input type="email" name="email" id="email" autocomplete="on" placeholder="Email" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" autocomplete="off" maxlength="30" />
       </li>
-      <li>
-        <input type="password" name="password" id="password" autocomplete="off" maxlength="30" placeholder="Password" />
-      </li>
-      <li>
+      <li class="submit">
         <input type="submit" id="emailSignup" value="Sign up" />
+      </li>
+      <li class="submit">
+        <input type="submit" id="emailSignin" value="Sign in" />
       </li>
     </ol>
     </form>
     <div id="fastSignup">
-      <h3>Fast sign up</h3>
-      <input type="submit" id="fbSignup" class="fb" value="Sign up with Facebook" >
+      <h3>Fast entrance</h3>
+      <input type="submit" id="fbSignup" class="fb" value="Sign up/Sign in with Facebook" >
     </div>
-    <div id="signin">
-      <input type="submit" id="jump" value="Sign in" />
-      <h3>Already a member?</h3>
     </div>
   </div>
 </body>
